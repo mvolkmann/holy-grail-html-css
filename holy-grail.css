@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+  font-family: sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+footer {
+  background-color: blue;
+  padding: 20px;
+}
+
+h1 {
+  background-color: red;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+nav {
+  background-color: yellow;
+  color: black;
+  overflow: auto;
+  padding: 20px;
+  width: 200px;
+}
+
+nav > a {
+  display: block;
+  text-decoration: none;
+}
+
+section {
+  background-color: green;
+  overflow: auto;
+  padding: 20px;
+  flex-grow: 1;
+}
