@@ -67,7 +67,7 @@ nav > a {
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   .hamburger {
@@ -75,7 +75,7 @@ nav > a {
     border: none;
     color: white;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     outline: none;
   }
 
