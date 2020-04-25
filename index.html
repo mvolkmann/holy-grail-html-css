@@ -6,9 +6,34 @@
     <meta name="description" content="Holy Grail HTML and CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="holy-grail.css">
+    <script>
+      let nav;
+      let navOpen = false;
+      let navWidth = 0;
+
+      function toggleMenu() {
+        navOpen = !navOpen;
+        console.log('toggleMenu: navOpen =', navOpen);
+        console.log('toggleMenu: nav =', nav);
+        nav.style.left = navOpen ?
+          0 :
+          '-' + navWidth + 'px';
+        nav
+      }
+
+      window.onload = () => {
+        nav = document.querySelector('nav');
+        navWidth = nav.getBoundingClientRect().width;
+        nav.style.setProperty('--width', navWidth);
+        nav.style.left = `-${navWidth}px`;
+      }
+    </script>
   </head>
   <body>
-    <h1>Holy Grail Header</h1>
+    <header>
+      <button class="hamburger" onclick="toggleMenu()">&#x2630;</button>
+      <h1>Holy Grail Header</h1>
+    </header>
     <main>
       <nav>
         <h2>Holy Grail Nav</h2>

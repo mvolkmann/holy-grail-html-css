@@ -13,7 +13,11 @@ footer {
   padding: 20px;
 }
 
-h1 {
+.hamburger {
+  display: none;
+}
+
+header {
   background-color: red;
   margin: 0;
   padding: 2rem;
@@ -44,4 +48,34 @@ section {
   overflow: auto;
   padding: 20px;
   flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .hamburger {
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    outline: none;
+  }
+
+  header {
+    display: flex;
+    text-align: left;
+  }
+
+  nav {
+    position: absolute;
+    transition: left 0.5s;
+  }
+
+  nav a {
+    margin: 1rem 0; // easier to tap
+  }
 }
