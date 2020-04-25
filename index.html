@@ -13,8 +13,6 @@
 
       function toggleMenu() {
         navOpen = !navOpen;
-        console.log('toggleMenu: navOpen =', navOpen);
-        console.log('toggleMenu: nav =', nav);
         nav.style.left = navOpen ?
           0 :
           '-' + navWidth + 'px';
@@ -26,6 +24,7 @@
         navWidth = nav.getBoundingClientRect().width;
         nav.style.setProperty('--width', navWidth);
         nav.style.left = `-${navWidth}px`;
+        nav.addEventListener('click', toggleMenu);
       }
     </script>
   </head>
@@ -36,74 +35,27 @@
     </header>
     <main>
       <nav>
-        <h2>Holy Grail Nav</h2>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
-        <a href="">Item #1</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
+        <a href="./beverly-hillbillies.html" target="frame">Beverly Hillbillies</a>
+        <a href="./friends.html" target="frame">Friends</a>
+        <a href="./grease.html" target="frame">Grease</a>
       </nav>
-      <section>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-        <div>This is a line.</div>
-      </section>
+      <iframe name="frame">default content</iframe>
     </main>
-    <footer>Holy Grail Footer</footer>
+    <footer>&copy; Holy Grail, 2020</footer>
   </body>
 </html>
