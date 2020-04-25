@@ -9,6 +9,8 @@ The requirements are:
 - a main content area that scrolls independently of the left nav
 
 Here's are some screenshots.
+The nav items are repeated many times in order to
+have enough nav content that scrolling is required.
 
 ## Desktop view
 
