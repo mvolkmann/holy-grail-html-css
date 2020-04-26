@@ -48,9 +48,6 @@ nav {
   overflow: auto;
   padding: 20px;
   width: 200px;
-
-  /* Hack for Safari */
-  max-height: calc(100vh - 13em);
 }
 
 nav > a {
