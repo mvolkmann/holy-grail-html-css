@@ -44,10 +44,11 @@ window.onload = () => {
   if (isSafari) {
     // Set nav CSS property max-height so nav scrolling works.
     header = document.querySelector('header');
-    headerHeight = nav.getBoundingClientRect().height;
+    headerHeight = Math.ceil(header.getBoundingClientRect().height) + 'px';
     footer = document.querySelector('footer');
-    footerHeight = nav.getBoundingClientRect().height;
-    nav.style.maxHeight = `calc(100vh - ${headerHeight + footerHeight})`;
+    footerHeight = Math.ceil(footer.getBoundingClientRect().height) + 'px';
+    const fudge = '24px';
+    nav.style.maxHeight = `calc(100vh - ${headerHeight} - ${footerHeight} - ${fudge})`;
     console.log('holy-grail.js: nav.style.maxHeight =', nav.style.maxHeight);
   }
 };
