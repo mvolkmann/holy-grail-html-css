@@ -32,7 +32,6 @@ iframe {
   background-color: var(--tertiary-color);
   border: none;
   overflow: auto;
-  padding: 20px;
   flex-grow: 1;
 }
 
