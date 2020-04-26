@@ -4,18 +4,19 @@ let navWidth = 0;
 
 function toggleMenu() {
   navOpen = !navOpen;
-  nav.style.left = navOpen ? 0 : '-' + navWidth + 'px';
-  nav;
+  console.log('holy-grail.js toggleMenu: navOpen =', navOpen);
+  nav.style.left = navOpen ? 0 : '-' + navWidth;
+  console.log('holy-grail.js toggleMenu: nav.style.left =', nav.style.left);
 }
 
 window.onload = () => {
   nav = document.querySelector('nav');
-  navWidth = nav.getBoundingClientRect().width;
-  // Set a CSS variable so the nav width is available in holy-grail.css.
-  nav.style.setProperty('--width', navWidth);
+  navWidth = getComputedStyle(nav).getPropertyValue('--nav-width').trim();
+  console.log('holy-grail.js x: navWidth = "' + navWidth + '"');
 
-  // Maybe the nav start out hidden in mobile view.
-  nav.style.left = `-${navWidth}px`;
+  // The nav starts out hidden in mobile view.
+  nav.style.left = `-${navWidth}`;
+  console.log('holy-grail.js toggleMenu: nav.style.left =', nav.style.left);
 
   let selectedAnchor;
 
@@ -33,21 +34,4 @@ window.onload = () => {
       toggleMenu();
     });
   });
-
-  // Safari hack
-  const {userAgent} = navigator;
-  const isSafari =
-    userAgent.includes('Safari/') &&
-    !userAgent.includes('Chrome/') &&
-    !userAgent.includes('Chromium/');
-  if (isSafari) {
-    // Set nav CSS property max-height so nav scrolling works.
-    header = document.querySelector('header');
-    headerHeight = Math.ceil(header.getBoundingClientRect().height) + 'px';
-    footer = document.querySelector('footer');
-    footerHeight = Math.ceil(footer.getBoundingClientRect().height) + 'px';
-    const fudge = '24px';
-    nav.style.maxHeight = `calc(100vh - ${headerHeight} - ${footerHeight} - ${fudge})`;
-    console.log('holy-grail.js: nav.style.maxHeight =', nav.style.maxHeight);
-  }
 };

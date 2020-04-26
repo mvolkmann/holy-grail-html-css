@@ -1,11 +1,14 @@
 body {
+  --footer-height: 60px;
+  --header-height: 140px;
+  --nav-width: 245px;
   --primary-color: #493548;
   --secondary-color: #4b4e6d;
   --tertiary-color: #6a8d92;
 
   display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 144px 1fr 59px;
+  grid-template-columns: var(--nav-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr var(--footer-height);
   grid-template-areas:
     'header header'
     'nav main'
@@ -19,9 +22,12 @@ body {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+
   background-color: black;
   grid-area: footer;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .hamburger {
@@ -29,11 +35,14 @@ footer {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--primary-color);
   grid-area: header;
   margin: 0;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem;
 }
 
 iframe {
@@ -49,7 +58,7 @@ nav {
   color: white;
   grid-area: nav;
   overflow: auto;
-  padding: 20px;
+  padding: 1rem;
 }
 
 nav > a {
@@ -72,7 +81,6 @@ nav > a {
   }
 
   h1 {
-    color: red;
     font-size: 1.5rem;
     margin-left: 1rem;
   }
@@ -87,16 +95,16 @@ nav > a {
   }
 
   header {
-    display: flex;
-    padding: 1rem;
+    justify-content: flex-start;
   }
 
   nav {
     grid-area: unset;
-    height: 100vh;
+    height: 100%;
     overflow: scroll;
     position: absolute;
     transition: left 0.5s;
+    width: calc(var(--nav-width) - 2rem);
   }
 
   nav a {
