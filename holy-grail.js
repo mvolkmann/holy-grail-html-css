@@ -40,7 +40,6 @@ window.onload = () => {
     userAgent.includes('Safari/') &&
     !userAgent.includes('Chrome/') &&
     !userAgent.includes('Chromium/');
-  console.log('holy-grail.js: isSafari =', isSafari);
   if (isSafari) {
     // Set nav CSS property max-height so nav scrolling works.
     header = document.querySelector('header');
