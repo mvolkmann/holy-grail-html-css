@@ -50,8 +50,7 @@ nav {
   width: 200px;
 
   /* Hack for Safari */
-  /* max-height: calc(100vh - 15em); */
-  max-height: 100vh;
+  max-height: calc(100vh - 13em);
 }
 
 nav > a {
