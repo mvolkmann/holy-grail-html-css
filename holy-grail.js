@@ -34,7 +34,7 @@ window.onload = () => {
     });
   });
 
-  // Safari hack:
+  // Safari hack
   const {userAgent} = navigator;
   const isSafari =
     userAgent.includes('Safari/') &&
